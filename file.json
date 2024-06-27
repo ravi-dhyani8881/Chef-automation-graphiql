@@ -1,0 +1,83 @@
+{
+  "projectName": "ravi",
+  "tables": [
+    {
+      "ravi": {
+        "fields": [
+          {
+            "name": "ravi-field",
+            "type": "INTEGER"
+          },
+          {
+            "name": "ravi-Field2",
+            "type": "VARCHAR"
+          }
+        ],
+        "relations": [
+          {
+            "table": [
+              {
+                "name": "ravi"
+              }
+            ],
+            "table": [
+              {
+                "name": "ravi"
+              },
+              {
+                "name": "ravi"
+              }
+            ]
+          }
+        ]
+      },
+      "dhyani": {
+        "fields": [
+          {
+            "name": "dhyani-field",
+            "type": "INTEGER"
+          }
+        ],
+        "relations": [
+          {
+            "table": [
+              {
+                "name": "dhyani"
+              }
+            ],
+            "table": [
+              {
+                "name": "ravi"
+              }
+            ]
+          }
+        ]
+      },
+      "second": {
+        "fields": [
+          {
+            "name": "second-field",
+            "type": "INTEGER"
+          }
+        ],
+        "relations": [
+          {
+            "table": [
+              {
+                "name": "dhyani"
+              },
+              {
+                "name": "ravi"
+              }
+            ],
+            "table": [
+              {
+                "name": "ravi"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
