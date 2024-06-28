@@ -27,8 +27,8 @@ jobs:
     - name: Build and tag Docker image
       run: |
         docker build -t my-chef-graphql-image .
-        docker tag my-chef-graphql-image:latest ${{ secrets.DOCKER_USERNAME }}/my-chef-solo-image:latest
+        docker tag my-chef-graphql-image:latest ${{ secrets.DOCKER_USERNAME }}/my-chef-graphql-image:latest
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-chef-solo-image:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/my-chef-graphql-image:latest
