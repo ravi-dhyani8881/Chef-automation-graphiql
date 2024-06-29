@@ -16,7 +16,7 @@ graph = json_data["tables"]
 
 projectName = json_data["projectName"]
 
-installDirectory = "/var/chef/output/gitRepo/"
+installDirectory = "/var/chef/output/"
 
 
 #file_names = JSON.parse(File.read('/Users/ravi.dhyani/Desktop/mine/git/chef/file_names.json'))
