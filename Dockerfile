@@ -31,7 +31,7 @@ COPY web.json /var/chef/config/web.json
 # Define environment variables for the repository
 ENV REPO_URL=https://github.com/ravi-dhyani8881/graphql.git
 ENV REPO_DIR=/var/chef/output/gitRepo
-ENV BRANCH_NAME=master
+ENV BRANCH_NAME=main
 
 
 # Clone the repository and checkout the desired branch/commit
