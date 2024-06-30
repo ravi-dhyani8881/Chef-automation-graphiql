@@ -15,7 +15,7 @@ fi
 
 
 # Change to the repository directory
-cd /var/chef/output/ravi
+cd /var/chef/output/
 
 # Configure Git for the current repository
 git config user.email "ravi.dhyani@mulesoft.com"
