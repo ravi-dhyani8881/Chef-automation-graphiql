@@ -54,6 +54,14 @@ template installDirectory + projectName+"/pom.xml" do
   action :create
 end
 
+directory installDirectory + projectName+ "/src/main/resources/graphql-client" do
+  owner 'ravi.dhyani'
+ # group 'group_name'
+  mode '0755'
+  recursive true
+  action :create
+end
+
 directory installDirectory + projectName+ "/src/main/java" do
   owner 'ravi.dhyani'
  # group 'group_name'
