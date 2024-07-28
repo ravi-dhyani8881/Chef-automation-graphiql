@@ -54,7 +54,7 @@ template installDirectory + projectName+"/pom.xml" do
   action :create
 end
 
-directory installDirectory + projectName+ "/src/main/resources/graphql-client" do
+directory installDirectory + projectName+ "/src/main/resources/graphql-client/" do
   owner 'ravi.dhyani'
  # group 'group_name'
   mode '0755'
