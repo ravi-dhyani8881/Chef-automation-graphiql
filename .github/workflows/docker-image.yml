@@ -37,6 +37,7 @@ jobs:
         echo "Contents of file.json:"
         cat file.json
         cat ${{ github.workspace }}/file.json
+ 
     - name: Extract projectName and write to file.json
       run: |
         projectName=$(jq -r '.client_payload.data' file.json)
@@ -46,6 +47,11 @@ jobs:
       run: |
         echo "Updated file.json content:"
         cat file.json
+
+    - name: Read event payload into environment variable
+      id: read_payload
+      run: echo "EVENT_PAYLOAD=$(cat file.json | jq -c .)" >> $GITHUB_ENV
+
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
