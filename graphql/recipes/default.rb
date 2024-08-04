@@ -117,7 +117,7 @@ end
 template installDirectory + projectName+ "/Dockerfile" do
   source 'Dockerfile.erb'
   variables(
-    name: projectName
+    projectName: projectName
   )
   owner 'ravi.dhyani'
   #group 'ravi.dhyani'
