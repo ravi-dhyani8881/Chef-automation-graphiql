@@ -114,6 +114,17 @@ template installDirectory + projectName+ "/src/main/java/com/spring/graph/Graphq
   action :create
 end
 
+template installDirectory + projectName+ "/Dockerfile" do
+  source 'Dockerfile.erb'
+  variables(
+    name: projectName
+  )
+  owner 'ravi.dhyani'
+  #group 'ravi.dhyani'
+  mode '0644'
+  action :create
+end
+
 directory installDirectory + projectName+ "/src/main/java/com/spring/graph/controller" do
   owner 'ravi.dhyani'
  # group 'group_name'
