@@ -227,6 +227,17 @@ directory installDirectory + projectName+ "/src/main/resources/graphql-client/" 
   action :create
 end
 
+template installDirectory + projectName+ "/src/main/resources/graphql-client/QueryUtils.java" do
+  source 'QueryUtils.java.erb'
+  variables(
+    name: 'ravi.dhyani'
+  )
+  owner 'ravi.dhyani'
+  #group 'ravi.dhyani'
+  mode '0644'
+  action :create
+end
+
 template installDirectory + projectName+ "/src/main/resources/QueryUtils.java" do
   source 'QueryUtils.java.erb'
   variables(
