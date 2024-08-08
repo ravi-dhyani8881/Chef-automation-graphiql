@@ -19,8 +19,7 @@ type Records<%= @table_name %> {
                              when 'int' then 'Integer'
                              else field['type']
                            end %>
-<% end %>    
-}
+<% end %>   
 
 <% @relations.each do |relation| %>
   <% relation['table'].each do |table| %>
